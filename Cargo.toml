@@ -1,0 +1,21 @@
+# Author: Lachlan Gunn
+#
+# Copyright:
+#   2018 Secure Systems Group, Aalto University https://ssg.aalto.fi/
+#
+# This code is released under the Apache 2.0 licence.
+
+[package]
+name = "experiment"
+version = "0.1.0"
+authors = ["Lachlan Gunn <lachlan.gunn@aalto.fi>"]
+license = "Apache-2.0"
+
+[dependencies]
+clap = "^2.32"
+failure = "^0.1"
+failure_derive = "^0.1"
+tempfile = "^3.0"
+chrono = "^0.4"
+rand = "^0.5"
+data-encoding = "^2.1"
