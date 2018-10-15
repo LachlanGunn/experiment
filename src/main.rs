@@ -15,6 +15,7 @@ extern crate tempfile;
 
 mod cli;
 
+use std::fs::OpenOptions;
 use std::io::Read;
 use std::io::Write;
 
@@ -118,7 +119,10 @@ fn run() -> Result<(), failure::Error> {
         }
 
         // Create the file itself.
-        std::fs::File::create(&file_path)
+        OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open(&file_path)
             .or_else(|_| Err(ExperimentAppError::FileCreation))?;
 
         // Print the filename to stdout.
