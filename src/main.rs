@@ -63,7 +63,7 @@ fn run() -> Result<(), failure::Error> {
         let context_name = matches.value_of("name").expect("Required argument not present.");
 
         // Get the ROOT/new path (creating the directory if needed)
-        let new_path = storage_path.join("new");
+        let new_path = storage_path.join(".new");
         if !new_path.is_dir() {
             std::fs::create_dir_all(&new_path)
                 .map_err(|_| ExperimentAppError::InvalidStorageRoot)?;
