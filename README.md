@@ -1,5 +1,5 @@
-Experiment data management tool
-===============================
+`experiment` data management tool
+=================================
 
 The `experiment` tool provides a basic utility for the management of
 experimental data. It allows experimental data to be stored and then atomically
@@ -27,8 +27,12 @@ Building `experiment`
 way to install Rust is with the [`rustup`](https://rustup.rs/) tool.  Then, simply run
 
 ```console
-$ cargo build
-$ cargo install
+$ cargo install --git https://github.com/LachlanGunn/experiment
+```
+
+Uninstallation is simple:
+```console
+$ cargo uninstall experiment
 ```
 
 License
